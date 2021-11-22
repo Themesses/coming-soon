@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import Layout from "../components/layout";
-import Timer from "../components/timer"
-import Particles from 'react-particles-js';
+import Timer from "../components/timer";
+import Particles from "react-particles-js";
 
 const particlesOptions = {
   particles: {
@@ -9,37 +9,36 @@ const particlesOptions = {
       value: 80,
       density: {
         enable: true,
-        value_area: 800
-      }
+        value_area: 800,
+      },
     },
     color: {
-      value: '#013753'
+      value: "#013753",
     },
-  }
+  },
 };
 
 class IndexPage extends React.Component {
-  state={
-    email: ''
-  }
+  state = {
+    email: "",
+  };
   handleV = (e) => {
-    this.setState({ email: e.target.value })
-  }
+    this.setState({ email: e.target.value });
+  };
   render() {
-    return(
+    return (
       <Layout>
         <div className="bgimg">
           <div className="bg-layout">
-          <Particles className="particles" params={particlesOptions}/>
+            <Particles className="particles" params={particlesOptions} />
             <div className="middle">
               <div className="content">
-                <h1 className="h1">ALMOST THERE</h1>
+                <h1 className="h1">ALMOST THERE...</h1>
                 <Timer />
                 {/* <p>Enter your email address and get notified</p> */}
                 {/* <input name="email" type="text" placeholder="email address" /> */}
                 {/* <button className="button">Submit</button> */}
-                <div id="mc_embed_signup">
-              </div>
+                <div id="mc_embed_signup"></div>
                 {/* <div className="btn-group">
                   <a href="#" className="button-social"><svg style={{width:24, height:24}} viewBox="0 0 24 24">
                     <path fill="#FFF" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" />
@@ -56,13 +55,12 @@ class IndexPage extends React.Component {
                 </div> */}
               </div>
             </div>
-            <div className="bottomleft">
-            </div>
+            <div className="bottomleft"></div>
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
